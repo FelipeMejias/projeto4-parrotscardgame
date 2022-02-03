@@ -14,14 +14,28 @@ const container=document.querySelector(".container")
 function adicionarCartas(){
 
     for(let contador=0;contador<quantidadeCartas;contador++){
-        container.innerHTML+='<div class="carta" onclick="virar()"><div class="frente face"><img src="papagaio.png"></img></div><div class="verso face"></div></div>'
+        container.innerHTML+='<div class="card" onClick="virar(this)"><div class="face front-face"><img src="papagaio.png"></div><div class="face back-face">"bekjcwkec"</div></div>'
 
     }
 }
 
 adicionarCartas();
 
-function virar(){
+let contador=0
+function virar(cartaClicada){
+    if(contador<2){
+    cartaClicada.classList.add('virada');
+    contador++;
+    }
+    else{
+        contador=0;
+        desvirar();
+    }
+}
 
-    
+function desvirar(){
+    const cartaViradas=document.querySelector('.virada');
+    cartaViradas.classList.remove('virada');
+    const outraCarta=document.querySelector('.virada');
+    outraCarta.classList.remove('virada');
 }

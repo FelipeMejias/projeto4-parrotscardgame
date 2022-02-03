@@ -1,0 +1,15 @@
+body{background-color: #EEF9BF;display: flex;flex-direction: column;align-items: center;}
+
+.container{width: 80vw;display: flex;justify-content: space-around;flex-wrap: wrap;}
+
+.carta{background-color: #A7E9AF;
+width: 117px;height: 146px;
+margin: 50px;
+border: 1px solid #99CEA8;
+box-sizing: border-box;
+border-radius: 5px;
+display: flex;justify-content: center;align-items: center;}
+
+h1{font-family: 'Roboto', sans-serif;color:#75B79E;font-size:56px;margin:40px;}
+
+.carta img{width: 100px;height: 100px;}

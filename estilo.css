@@ -6,7 +6,7 @@ body{background-color: #EEF9BF;display: flex;flex-direction: column;align-items:
 
 .card{background-color: #A7E9AF;
 width: 117px;height: 146px;
-margin: 50px;
+margin: 22px;
 border: 1px solid #99CEA8;
 box-sizing: border-box;
 border-radius: 5px;
@@ -44,6 +44,21 @@ h1{font-family: 'Roboto', sans-serif;color:#75B79E;font-size:56px;margin:40px;}
 
   .card.virada .front-face {
     transform: rotateY(-180deg);
+    
+  }
+
+  .relogio{
+    border-radius: 50%;
+    border:5px solid black;
+    font-size: 30px;
+    position:fixed;
+    top:10px;
+    right:10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
   }
 

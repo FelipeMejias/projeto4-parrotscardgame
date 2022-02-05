@@ -77,7 +77,7 @@ function conferirPar(primeiraCarta,segundaCarta){
 
 function conferirFimDoJogo(){
     if(paresAchados===quantidadeCartas/2){
-        alert("Você ganhou em "+contagemJogadas+" jogadas!")
+        alert("Você ganhou em "+contagemJogadas+" jogadas, com um tempo de "+tempoFinal+" segundos!")
     }
 }
 

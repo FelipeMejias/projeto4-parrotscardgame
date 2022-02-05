@@ -20,14 +20,23 @@ function formarListaJogo(){
     listaJogo.sort(comparador);
 }
 
-
-
-
-
 function comparador() { 
 	return Math.random() - 0.5; 
 }
 
+let tempoFinal=null
+function aumentarRelogio(){
+    if(paresAchados===quantidadeCartas/2){
+        clearInterval(intervalo);
+        ;
+    }else{
+    let relogio=document.querySelector('.relogio');
+    relogio.innerHTML=parseInt(relogio.innerHTML) + 1;
+    tempoFinal=relogio.innerHTML;
+}
+}
+let intervalo=null;
+intervalo=setInterval(aumentarRelogio,1000);
 
 
 perguntarQuantidade();

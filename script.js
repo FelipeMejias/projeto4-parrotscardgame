@@ -25,7 +25,9 @@ let contador=0
 let nomeCarta1=''
 let nomeCarta2=''
 let carta1=null;
-let carta2=null
+let carta2=null;
+let paresAchados=0;
+let contagemJogadas=0
 function virar(cartaClicada,nomeCarta){
     if(contador===0){
 
@@ -59,14 +61,23 @@ function desvirar(){
 }
 
 function conferirPar(primeiraCarta,segundaCarta){
+    contagemJogadas++;
     if(primeiraCarta==segundaCarta){
         zerarContador();
         nomeCarta1='';
         nomeCarta2='';
+        paresAchados++;
     }
     else{
         setTimeout(desvirar,1000);
         setTimeout(zerarContador,1000);
+    }
+    setTimeout( conferirFimDoJogo,7);
+}
+
+function conferirFimDoJogo(){
+    if(paresAchados===quantidadeCartas/2){
+        alert("Você ganhou em "+contagemJogadas+" jogadas!")
     }
 }
 

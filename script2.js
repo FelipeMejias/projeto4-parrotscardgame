@@ -42,3 +42,5 @@ intervalo=setInterval(aumentarRelogio,1000);
 perguntarQuantidade();
 formarListaJogo();
 adicionarCartas();
+
+

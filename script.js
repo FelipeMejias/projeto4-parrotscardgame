@@ -8,18 +8,15 @@ function perguntarQuantidade(){
 
 }
 
-
 const container=document.querySelector(".container")
 
 function adicionarCartas(){
 
     for(let contador=0;contador<quantidadeCartas;contador++){
-        container.innerHTML+='<div class="card" onClick="virar(this,'+listaJogo[contador].nome+')"><div class="face front-face"><img src="papagaio.png"></div><div class="face back-face">'+listaJogo[contador].imagem+'</div></div>'
+        container.innerHTML+='<div class="card" data-identifier="card" onClick="virar(this,'+listaJogo[contador].nome+')"><div class="face front-face" data-identifier="front-face"><img src="papagaio.png"></div><div class="face back-face" identifier="back-face">'+listaJogo[contador].imagem+'</div></div>'
 
     }
 }
-
-
 
 let contador=0
 let nomeCarta1=''
@@ -28,6 +25,7 @@ let carta1=null;
 let carta2=null;
 let paresAchados=0;
 let contagemJogadas=0
+
 function virar(cartaClicada,nomeCarta){
     if(contador===0){
 
@@ -72,12 +70,13 @@ function conferirPar(primeiraCarta,segundaCarta){
         setTimeout(desvirar,1000);
         setTimeout(zerarContador,1000);
     }
-    setTimeout( conferirFimDoJogo,7);
+    setTimeout( conferirFimDoJogo,500);
 }
 
 function conferirFimDoJogo(){
     if(paresAchados===quantidadeCartas/2){
         alert("Você ganhou em "+contagemJogadas+" jogadas, com um tempo de "+tempoFinal+" segundos!")
+        recomecarJogo();
     }
 }
 

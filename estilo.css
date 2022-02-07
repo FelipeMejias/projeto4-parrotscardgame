@@ -1,21 +1,35 @@
-body{background-color: #EEF9BF;display: flex;flex-direction: column;align-items: center;}
+body{
+  background-color: #EEF9BF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
 
-.container{width: 80vw;display: flex;margin-top:120px;
-    justify-content: space-around;flex-wrap: wrap;
-    position: absolute;}
+.container{
+  width: 80vw;display: flex;
+  margin-top:120px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: absolute;}
 
-.card{background-color: #A7E9AF;
-width: 117px;height: 146px;
-margin: 22px;
-border: 1px solid #99CEA8;
-box-sizing: border-box;
-border-radius: 5px;
-display: flex;justify-content: center;align-items: center;
-position: relative;}
+.card{
+  background-color: #A7E9AF;
+  width: 117px;height: 146px;
+  margin: 22px;
+  border: 1px solid #99CEA8;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;justify-content: center;align-items: center;
+  position: relative;}
 
-h1{font-family: 'Roboto', sans-serif;color:#75B79E;font-size:56px;margin:40px;}
+h1{
+  font-family: 'Roboto', sans-serif;
+  color:#75B79E;
+  font-size:56px;
+  margin:40px;}
 
-.card img{width: 100px;height: 100px;}
+.card img{
+  width: 100px;
+  height: 100px;}
 
 .face {
     width: 100%;
@@ -34,17 +48,14 @@ h1{font-family: 'Roboto', sans-serif;color:#75B79E;font-size:56px;margin:40px;}
 
   .back-face {
     transform: rotateY(180deg);
-    
   }
   
-
   .card.virada .back-face {
     transform: rotateY(0deg);
   }
 
   .card.virada .front-face {
     transform: rotateY(-180deg);
-    
   }
 
   .relogio{
@@ -59,7 +70,24 @@ h1{font-family: 'Roboto', sans-serif;color:#75B79E;font-size:56px;margin:40px;}
     display: flex;
     justify-content: center;
     align-items: center;
-    
+  }
+
+  @media(max-width:614px){
+    h1{
+    font-size: 36px;
+    text-align: center;}
+
+    .container{
+      flex-direction: column;
+      width: 100vw;
+      align-items: center;}
+
+    .relogio{
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+    }
+
   }
 
 
